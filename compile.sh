@@ -5,6 +5,11 @@ if [ $# -ne 1 ] ; then
     exit 0
 fi
 
+if ! hash ocamlbuild 2>/dev/null ; then
+    echo "ocamlbuild not installed"
+    exit 0
+fi
+
 if ! hash pcregrep 2>/dev/null ; then
     echo "pcregrep not installed"
     exit 0
