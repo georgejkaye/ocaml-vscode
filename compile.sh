@@ -32,7 +32,7 @@ fi
 
 # Grab packages from .merlin
 if [ -f ".merlin" ] ; then
-    PKGS=$(pcregrep -o1 'PKG ([a-z]*)' .merlin)
+    PKGS=$(pcregrep -o1 'PKG ([a-z_]*)' .merlin)
 fi
 
 for pkg in $PKGS ; do
